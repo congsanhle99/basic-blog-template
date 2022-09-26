@@ -24,10 +24,10 @@
     <!-- nav -->
     <nav class="bg-slate-300 shadow-sm shadow-slate-300">
       <div class="container mx-auto px-4 py-3 flex items-center">
-        <a href="#">
+        <a href="./index.html">
           <img src="./images/easyshop.png" alt="Company Logo" />
         </a>
-        <div class="ml-12 flex">
+        <div class="ml-12 lg:flex space-x-5 hidden">
           <a href="#" class="flex items-center font-semibold text-md hover:text-blue-700 transition">
             <span class="mr-2">
               <i class="fas fa-home"></i>
@@ -35,7 +35,7 @@
             Home
           </a>
         </div>
-        <div class="ml-12 flex">
+        <div class="ml-12 lg:flex space-x-5 hidden">
           <a href="#" class="flex items-center font-semibold text-md hover:text-blue-700 transition">
             <span class="mr-2">
               <i class="fas fa-file-alt"></i>
@@ -43,7 +43,7 @@
             About
           </a>
         </div>
-        <div class="ml-12 flex">
+        <div class="ml-12 lg:flex space-x-5 hidden">
           <a href="#" class="flex items-center font-semibold text-md hover:text-blue-700 transition">
             <span class="mr-2">
               <i class="fas fa-phone"></i>
@@ -51,7 +51,7 @@
             Contact
           </a>
         </div>
-        <div class="relative ml-auto">
+        <div class="relative ml-auto hidden lg:block">
           <span class="absolute left-3 top-2.5 text-sm text-gray-600">
             <i class="fas fa-search text-lg"></i>
           </span>
@@ -69,14 +69,25 @@
             Login/Register
           </a>
         </div>
+
+        <!-- icon menu in 1280px -->
+        <div class="ml-5">
+          <div
+            class="text-xl text-gray-700 cursor-pointer ml-4 xl:hidden block hover:text-blue-700 transition"
+            id="open_sidebar"
+          >
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <!-- end of icon menu in 1280px -->
       </div>
     </nav>
     <!-- end of nav -->
 
     <div class="py-12 bg-gray-200">
-      <div class="container mx-auto px-4 flex">
+      <div class="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
         <!-- category -->
-        <div class="w-3/12">
+        <div class="w-3/12 hidden xl:block">
           <div class="bg-white shadow-sm shadow-white rounded-xl p-4 mr-4">
             <h3 class="text-xl font-semibold text-gray-700 font-roboto">Categories</h3>
             <div class="text-gray-700 space-y-2 mt-4">
@@ -265,7 +276,7 @@
 
           <!-- post -->
           <div class="rounded-sm overflow-hidden bg-white shadow-sm">
-            <a href="#" class="block rounded-md overflow-hidden">
+            <a href="view.html" class="block rounded-md overflow-hidden">
               <img
                 src="./images/pic6.png"
                 class="w-full h-96 object-cover transform hover:scale-110 duration-500 transition"
@@ -639,10 +650,155 @@
         </div>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <div
+      class="fixed w-full h-full bg-black bg-opacity-25 left-0 top-0 opacity-0 invisible transition-all duration-500 xl:hidden"
+      id="sidebar_wrapper"
+    >
+      <div
+        class="fixed top-0 w-72 h-full bg-white shadow-sm flex flex-col transition-all duration-500 -left-80"
+        id="sidebar"
+      >
+        <div class="lg:hidden">
+          <div class="relative mx-3 mt-3 shadow-sm">
+            <span class="absolute left-3 top-2.5 text-sm text-gray-600">
+              <i class="fas fa-search text-lg"></i>
+            </span>
+            <input
+              type="text"
+              class="block w-full rounded-3xl pl-12 pr-2 py-2 focus:outline-none bg-gray-100 text-sm text-gray-600 shadow-sm shadow-slate-300 border-none"
+              placeholder="Search..."
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-700 mb-1 font-roboto pl-3 pt-3 capitalize">Menu</h3>
+          <div class="lg:flex ml-4 mb-3">
+            <a href="#" class="flex items-center font-semibold text-md hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="fas fa-home"></i>
+              </span>
+              Home
+            </a>
+          </div>
+          <div class="lg:flex ml-4 mb-3">
+            <a href="#" class="flex items-center font-semibold text-md hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="fas fa-file-alt"></i>
+              </span>
+              About
+            </a>
+          </div>
+          <div class="lg:flex ml-4 mb-3">
+            <a href="#" class="flex items-center font-semibold text-md hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="fas fa-phone"></i>
+              </span>
+              Contact
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white shadow-sm shadow-white rounded-xl p-4 mr-4">
+          <h3 class="text-xl font-semibold text-gray-700 font-roboto">Categories</h3>
+          <div class="text-gray-700 space-y-2 mt-4">
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Beauty</span>
+              <span class="font-normal ml-auto">(12)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Business</span>
+              <span class="font-normal ml-auto">(5)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Fashion</span>
+              <span class="font-normal ml-auto">(8)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Food</span>
+              <span class="font-normal ml-auto">(2)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Nature</span>
+              <span class="font-normal ml-auto">(9)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Music</span>
+              <span class="font-normal ml-auto">(3)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>News</span>
+              <span class="font-normal ml-auto">(6)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>People</span>
+              <span class="font-normal ml-auto">(2)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Sports</span>
+              <span class="font-normal ml-auto">(14)</span>
+            </a>
+            <a href="#" class="flex items-center font-semibold leading-6 hover:text-blue-700 transition">
+              <span class="mr-2">
+                <i class="far fa-folder-open"></i>
+              </span>
+              <span>Technology</span>
+              <span class="font-normal ml-auto">(16)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of Mobile menu -->
+
     <footer class="border-t py-4">
       <p class="text-sm text-center">
         Copyright @ 2022 <span class="font-semibold">Easy Learning</span> All right reserved
       </p>
     </footer>
+
+    <script>
+      document.querySelector("#open_sidebar").addEventListener("click", () => {
+        document.querySelector("#sidebar").classList.remove("-left-80");
+        document.querySelector("#sidebar").classList.add("left-0");
+        document.querySelector("#sidebar_wrapper").classList.remove("opacity-0");
+        document.querySelector("#sidebar_wrapper").classList.remove("invisible");
+      });
+
+      document.body.addEventListener("click", (e) => {
+        if (e.target.id === "sidebar_wrapper") {
+          document.querySelector("#sidebar").classList.add("-left-80");
+          document.querySelector("#sidebar").classList.remove("left-0");
+          document.querySelector("#sidebar_wrapper").classList.add("opacity-0");
+          document.querySelector("#sidebar_wrapper").classList.add("invisible");
+        }
+      });
+    </script>
   </body>
 </html>
